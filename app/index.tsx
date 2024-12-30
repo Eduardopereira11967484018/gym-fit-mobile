@@ -11,17 +11,19 @@ export default function Index() {
       />
 
       <Text style={styles.title}>
-        Gym<Text style={{ color: Colors.green }}>Fit</Text>
+        Gym<Text style={{ color: Colors.blue }}>Fit</Text>
       </Text>
 
       <Text style={styles.text}>
       Start your journey with a personal trainer powered by artificial intelligence
       </Text>
-
-      
+      <Link href="/step" asChild>
         <Pressable style={styles.button}>
-          <Text style={styles.buttonText}>Get started</Text>
+          <Text style={styles.buttonText}>Gerar dieta</Text>
         </Pressable>
+      </Link>
+
+
       
     </View>
   );
@@ -48,7 +50,7 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   text: {
-    fontSize: 16,
+    fontSize: 12,
     color: Colors.white,
     width: 240,
     textAlign: 'center',
@@ -56,17 +58,17 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: Colors.blue,
-    width: '80%',
-    height: 48,
-    borderRadius: 8,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 24,
-    elevation: 4, // Para sombra no Android
-    shadowColor: '#000', // Para sombra no iOS
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    shadowRadius: 4,
+        width: '80%',
+        height: 48,
+        borderRadius: 8,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 24,
+        elevation: 4, // Para sombra no Android
+        shadowColor: '#000', // Para sombra no iOS
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.2,
+        shadowRadius: 4,
   },
   buttonText: {
     color: Colors.white,
