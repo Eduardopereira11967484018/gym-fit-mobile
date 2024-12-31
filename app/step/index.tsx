@@ -17,10 +17,10 @@ import { router } from 'expo-router'
 
 
 const schema = z.object({
-  name: z.string().min(1, { message: "O nome é obrigatório"}),
-  weight: z.string().min(1, { message: "O peso é obrigatório"}),
-  age: z.string().min(1, { message: "A idade é obrigatória"}),
-  height: z.string().min(1, { message: "A altura é obrigatória"}),
+  name: z.string().min(1, { message: "Name is mandatory"}),
+  weight: z.string().min(1, { message: "Weight is mandatory"}),
+  age: z.string().min(1, { message: "Age is mandatory"}),
+  height: z.string().min(1, { message: "Height is mandatory"}),
 })
 
 type FormData = z.infer<typeof schema>
@@ -44,14 +44,14 @@ export default function Step(){
       height: data.height
     })
 
-   router.push("/create/index")
+   router.push("/create")
   }
 
   return(
     <View style={styles.container}>
       <Header
-        step='Passo 1'
-        title='Vamos começar'
+        step='Step 1 of 2'
+        title='Personal data'
       />
 
       <ScrollView style={styles.content}>
@@ -59,12 +59,12 @@ export default function Step(){
         <Input
           name="name"
           control={control}
-          placeholder="Digite seu nome..."
+          placeholder="Enter your name..."
           error={errors.name?.message}
           keyboardType="default"
         />
         
-        <Text style={styles.label}>Seu peso atual:</Text>
+        <Text style={styles.label}>Your current weight:</Text>
         <Input
           name="weight"
           control={control}
@@ -73,7 +73,7 @@ export default function Step(){
           keyboardType="numeric"
         />     
         
-        <Text style={styles.label}>Sua altura atual:</Text>
+        <Text style={styles.label}>Your current height:</Text>
         <Input
           name="height"
           control={control}
@@ -82,7 +82,7 @@ export default function Step(){
           keyboardType="numeric"
         />     
         
-        <Text style={styles.label}>Sua idade atual:</Text>
+        <Text style={styles.label}>Your current age:</Text>
         <Input
           name="age"
           control={control}

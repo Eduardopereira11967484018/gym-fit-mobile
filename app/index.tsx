@@ -19,7 +19,7 @@ export default function Index() {
       </Text>
       <Link href="/step" asChild>
         <Pressable style={styles.button}>
-          <Text style={styles.buttonText}>Gerar dieta</Text>
+          <Text style={styles.buttonText}>start training</Text>
         </Pressable>
       </Link>
 

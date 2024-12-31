@@ -11,8 +11,8 @@ import {
   import { useForm } from  'react-hook-form'
   import { Colors } from '../../constants/Colors'
   import { Header } from '../../componets/header/index'
-  import { Select } from '../../componets/select/index'
-  import { useDataStore } from '../../store/data'
+  import { Select } from '../../componets/input/select'
+ // import { useDataStore } from '../../store/data'
   import { router } from 'expo-router'
   
   const schema = z.object({
@@ -88,6 +88,15 @@ import {
         />      
   
         <Text style={styles.label}>Selecione seu objetivo:</Text>
+        <Select
+          control={control}
+          name="objective"
+          placeholder="Selecione o nível de atividade física"
+          error={errors.objective?.message}
+          options={objectiveOptions}
+        />  
+
+         <Text style={styles.label}>Selecione seu objetivo:</Text>
         <Select
           control={control}
           name="objective"
