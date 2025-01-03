@@ -1,6 +1,8 @@
+//store/data.ts
 import { create } from 'zustand'
 
 export type User = {
+  frequency: any;
   name: string;
   weight: string;
   age: string;
@@ -25,7 +27,7 @@ export const useDataStore = create<DataState>((set) => ({
     gender: "",
     height: "",
     weight: "",
-    frequency: "",
+    frequency: 0,
 
   },
   setPageOne: (data) => set((state) => ({ user: {...state.user, ...data} }) ),

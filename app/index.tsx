@@ -10,9 +10,7 @@ export default function Index() {
         style={styles.logo}
       />
 
-      <Text style={styles.title}>
-        Gym<Text style={{ color: Colors.blue }}>Fit</Text>
-      </Text>
+     
 
       <Text style={styles.text}>
       Start your journey with a personal trainer powered by artificial intelligence
@@ -50,8 +48,9 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   text: {
-    fontSize: 12,
-    color: Colors.white,
+    fontSize: 16
+    ,
+    color: Colors.blue,
     width: 240,
     textAlign: 'center',
     marginBottom: 16,
@@ -71,7 +70,7 @@ const styles = StyleSheet.create({
         shadowRadius: 4,
   },
   buttonText: {
-    color: Colors.white,
+    color: Colors.blue,
     fontSize: 16,
     fontWeight: 'bold',
   },

@@ -13,7 +13,7 @@ import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from  'react-hook-form'
 import { router } from 'expo-router'
-//import { useDataStore } from '../../store/data'
+import { useDataStore } from '../../store/data'
 
 
 const schema = z.object({
@@ -41,7 +41,8 @@ export default function Step(){
       name: data.name,
       weight: data.weight,
       age: data.age,
-      height: data.height
+      height: data.height,
+      frequency: undefined
     })
 
    router.push("/create")
@@ -92,7 +93,7 @@ export default function Step(){
         />
 
         <Pressable style={styles.button} onPress={handleSubmit(handleCreate)}>
-          <Text style={styles.buttonText}>Avançar</Text>
+          <Text style={styles.buttonText}>Next</Text>
         </Pressable>     
 
       </ScrollView>
@@ -130,6 +131,3 @@ const styles = StyleSheet.create({
   }
 })
 
-function useDataStore(arg0: (state: any) => any) {
-  throw new Error('Function not implemented.')
-}

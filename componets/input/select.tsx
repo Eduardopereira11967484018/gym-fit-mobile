@@ -42,7 +42,7 @@ import React from 'react';
               <Text>
                 {value ? options.find(option => option.value === value)?.label : placeholder }
               </Text>
-              <Feather name="arrow-down" size={16} color="#000"/>
+              <Feather name="arrow-down" size={16} color='rgb(45, 156, 219)'/>
             </TouchableOpacity>
   
   
@@ -94,7 +94,7 @@ import React from 'react';
     },
     input:{
       height: 44,
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.blue,
       paddingHorizontal: 10,
       borderRadius: 4,
     },
