@@ -1,3 +1,4 @@
+//types/data.ts
 interface RefeicoesProps{
     horario: string;
     nome: string;

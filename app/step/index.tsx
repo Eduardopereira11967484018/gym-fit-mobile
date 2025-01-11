@@ -6,8 +6,8 @@ import {
   ScrollView
  } from 'react-native'
 import { Colors } from '../../constants/Colors'
-import { Header } from '../../componets/header/index'
-import { Input } from '../../componets/input/index'
+import { Header } from '../../componets/header'
+import { Input } from '../../componets/input'
 
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -17,10 +17,10 @@ import { useDataStore } from '../../store/data'
 
 
 const schema = z.object({
-  name: z.string().min(1, { message: "Name is mandatory"}),
-  weight: z.string().min(1, { message: "Weight is mandatory"}),
-  age: z.string().min(1, { message: "Age is mandatory"}),
-  height: z.string().min(1, { message: "Height is mandatory"}),
+  name: z.string().min(1, { message: "O nome é obrigatório"}),
+  weight: z.string().min(1, { message: "O peso é obrigatório"}),
+  age: z.string().min(1, { message: "A idade é obrigatória"}),
+  height: z.string().min(1, { message: "A altura é obrigatória"}),
 })
 
 type FormData = z.infer<typeof schema>
@@ -45,14 +45,14 @@ export default function Step(){
       frequency: undefined
     })
 
-   router.push("/create")
+    router.push("/create")
   }
 
   return(
     <View style={styles.container}>
       <Header
-        step='Step 1 of 2'
-        title='Personal data'
+        step='Passo 1'
+        title='Vamos começar'
       />
 
       <ScrollView style={styles.content}>
@@ -60,12 +60,12 @@ export default function Step(){
         <Input
           name="name"
           control={control}
-          placeholder="Enter your name..."
+          placeholder="Digite seu nome..."
           error={errors.name?.message}
           keyboardType="default"
         />
         
-        <Text style={styles.label}>Your current weight:</Text>
+        <Text style={styles.label}>Seu peso atual:</Text>
         <Input
           name="weight"
           control={control}
@@ -74,7 +74,7 @@ export default function Step(){
           keyboardType="numeric"
         />     
         
-        <Text style={styles.label}>Your current height:</Text>
+        <Text style={styles.label}>Sua altura atual:</Text>
         <Input
           name="height"
           control={control}
@@ -83,7 +83,7 @@ export default function Step(){
           keyboardType="numeric"
         />     
         
-        <Text style={styles.label}>Your current age:</Text>
+        <Text style={styles.label}>Sua idade atual:</Text>
         <Input
           name="age"
           control={control}
@@ -93,7 +93,7 @@ export default function Step(){
         />
 
         <Pressable style={styles.button} onPress={handleSubmit(handleCreate)}>
-          <Text style={styles.buttonText}>Next</Text>
+          <Text style={styles.buttonText}>Avançar</Text>
         </Pressable>     
 
       </ScrollView>
@@ -130,4 +130,3 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   }
 })
-

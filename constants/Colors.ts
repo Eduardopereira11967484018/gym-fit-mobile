@@ -1,8 +1,8 @@
 export const Colors = {
-background: 'rgb(245, 245, 245)', //  claro
-white: 'rgb(240, 232, 232)',
-green: 'rgb(111, 207, 151)', // Verde claro
-orange: 'rgb(242, 153, 74)', // Laranja
-blue: 'rgb(45, 156, 219)', // Azul
-black: 'rgb(51, 51, 51)' // Preto escuro
+  background: '#0C2B23',  // Azul escuro mais profundo para maior elegância e modernidade
+  white: '#F8F9F9',       // Branco ligeiramente acinzentado, mais suave aos olhos
+  green: '#20C997',       // Verde com tom pastel, mais leve e contemporâneo
+  orange: '#089874',      // Laranja equilibrado e vibrante, ainda suave para botões
+  blue: '#005F73',        // Azul profundo e sutil, evocando confiança e calma
+  black: '#2F4F4F',        
 };
